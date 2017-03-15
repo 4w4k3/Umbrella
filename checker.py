@@ -20,20 +20,23 @@ def install_dependencies():
     os.system('sudo apt-get install wine32 -y')
     os.system('sudo apt-get -f install')
     os.system('sudo apt-get install wine32 -y')
+    os.system('sudo apt-get install winbind -y')
     os.system('clear')
     banner("Press enter to default Winecfg to Windows 7")
     raw_input()
     os.system('winecfg')
     os.system('clear')
 
-
-def download_python():
+def download_vc_for_py():
+    """ Download the VC extenstion for python, this is a little less scary because it's from MS """
+    banner("Downloading VCForPython27.msi, please wait...")
+    os.system('wget https://download.microsoft.com/download/7/9/6/796EF2E4-801B-4FC4-AB28-B59FBF6D907B/VCForPython27.msi')
+    os.system('sudo wine msiexec /i VCForPython27.msi /L*v log2.txt')def download_python():
     """ Download python to WINDOWS for compile"""
     banner("Downloading Python 2.7.x.msi, please wait...")
     os.system('wget https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi')
     os.system('sudo wine msiexec /i python-2.7.12.msi /L*v log.txt')
     os.system('clear')
-
 
 def download_python_win_exten():
     """ Download Windows extenstion for python without checking the checksum.. """
@@ -55,7 +58,7 @@ def main():
     banner("Moving to dependent files..")
     print("\n")
     download_python_win_exten()
-
+    
 
 if __name__ == '__main__':
     main()
