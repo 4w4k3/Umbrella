@@ -53,17 +53,33 @@ Taken from [LICENSE](LICENSE).
 ```
 git clone https://github.com/4w4k3/Umbrella.git
 ```
-
 ### Running:
 ```
-sudo python umbrella.py
+cd Umbrella
+```
+
+```
+sudo su
+```
+
+```
+chmod +x install.sh
+```
+
+```
+./install.sh
+```
+
+```
+python umbrella.py
 ```
 
 If you have another version of Python:
 
 ```
-sudo python2.7 umbrella.py
+python2.7 umbrella.py
 ```
+
 
 ### Screenshot:
 ![Shot](https://github.com/4w4k3/Umbrella/blob/master/Screens/shot.png)

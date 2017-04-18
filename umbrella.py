@@ -127,17 +127,7 @@ def disclaimer():
 
 def main():
     if not os.geteuid() == 0:
-        sys.exit('Umbrella must be run as root')
-    clear()
-    path = '.OK'
-    if os.path.isdir(path):
-        pass
-    else:
-        dep = raw_input('[!] Dependencies not found, Do you want to install it? (y/n) : ')
-        if dep.upper() == 'Y':
-            exec_com('checker.py', sudo=True)
-        else:
-            sys.exit(0)
+        sys.exit('Umbrella must be run as root');
     clear()
     disclaimer()    
     heading()
